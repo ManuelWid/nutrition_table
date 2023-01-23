@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        p {
+            font-size: .8rem;
+            font-weight: bold;
+        }
+
+        /* the wrapper holds everything, nothing is outside of that div */
+        .wrap {
+            width: 300px;
+            margin: 5em auto;
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        /* line classes are made for div element to make the dividing lines */
+        .fatline {
+            height: .5em;
+            background-color: black;
+        }
+
+        .thinline {
+            height: 1px;
+            background-color: black;
+        }
+
+        .midline {
+            height: .25em;
+            background-color: black;
+        }
+
+        .flex {
+            display: flex;
+            width: 100%;
+        }
+
+        .column {
+            flex-direction: column;
+        }
+
+        .bigcol {
+            width: 70%;
+            align-self: flex-end;
+        }
+
+        .smallcol {
+            width: 15%;
+            text-align: right;
+            align-self: flex-end;
+        }
+
+        .bigcol2 {
+            width: 40%;
+        }
+
+        .smallcol2 {
+            width: 25%;
+        }
+
+        .align-end {
+            text-align: end;
+            width: 100%;
+        }
+
+        .small {
+            font-size: .7rem;
+        }
+
+        /* used for indentation on the first paragraph within a flexbox */
+        .tabp {
+            padding-left: 1rem;
+        }
+
+        /* used on the line divs to indent them equal to the paragraphs */
+        .tabm {
+            margin-left: 1rem;
+        }
+
+        /* literally in the name, only applies to the very last 
+        paragraph as it has completely different style */
+        .lastrow {
+            justify-content: center;
+            gap: 3%;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h2>Nutrition Facts</h2>
+        <p>Serving Size 1 cup (50g)</p>
+        <p>Servings per Container 10</p>
+        <div class="fatline"></div>
+        <div class="flex">
+            <p class="small bigcol">Amount Per Serving</p>
+            <p class="small smallcol">Cereal</p>
+            <p class="small smallcol">with 1/2 cup 1% Milk</p>
+        </div>
+        <div class="thinline"></div>
+        <div class="flex bordertop">
+            <p class="bigcol">Calories</p>
+            <p class="smallcol">190</p>
+            <p class="smallcol">250</p>
+        </div>
+        <div class="flex column">
+            <div class="thinline tabm"></div>
+            <div class="flex">
+                <p class="tabp bigcol">Calories from Fat</p>
+                <p class="smallcol">35</p>
+                <p class="smallcol">45</p>
+            </div>
+        </div>
+        <div class="midline"></div>
+        <div class="flex">
+            <p class="small align-end">%Daily Value**</p>
+        </div>
+        <div class="thinline"></div>
+        <div class="flex">
+            <p class="bigcol">Total Fat 4g*</p>
+            <p class="smallcol">6%</p>
+            <p class="smallcol">8%</p>
+        </div>
+        <div class="thinline tabm"></div>
+        <div class="flex">
+            <p class="bigcol tabp">Saturated Fat 1.5g</p>
+            <p class="smallcol">8%</p>
+            <p class="smallcol">13%</p>
+        </div>
+        <div class="thinline tabm"></div>
+        <div class="flex">
+            <p class="bigcol tabp">Trans Fat 0g</p>
+            <p class="smallcol"></p>
+            <p class="smallcol"></p>
+        </div>
+        <div class="thinline"></div>
+        <div class="flex">
+            <p class="bigcol">Cholesterol 0mg</p>
+            <p class="smallcol">0%</p>
+            <p class="smallcol">3%</p>
+        </div>
+        <div class="thinline"></div>
+        <div class="flex">
+            <p class="bigcol">Sodium 190mg</p>
+            <p class="smallcol">8%</p>
+            <p class="smallcol">11%</p>
+        </div>
+        <div class="thinline"></div>
+        <div class="flex">
+            <p class="bigcol">Total Carbohydrate 39g</p>
+            <p class="smallcol">13%</p>
+            <p class="smallcol">15%</p>
+        </div>
+        <div class="thinline tabm"></div>
+        <div class="flex">
+            <p class="bigcol tabp">Dietary Fiber 6g</p>
+            <p class="smallcol">24%</p>
+            <p class="smallcol">24%</p>
+        </div>
+        <div class="thinline tabm"></div>
+        <div class="flex">
+            <p class="bigcol tabp">Sugars 11g</p>
+            <p class="smallcol"></p>
+            <p class="smallcol"></p>
+        </div>
+        <div class="thinline"></div>
+        <div class="flex">
+            <p class="bigcol">Protein 4g</p>
+            <p class="smallcol"></p>
+            <p class="smallcol"></p>
+        </div>
+        <div class="fatline"></div>
+        <div class="flex">
+            <p class="bigcol">Vitamin A</p>
+            <p class="smallcol">0%</p>
+            <p class="smallcol">6%</p>
+        </div>
+        <div class="thinline"></div>
+        <div class="flex">
+            <p class="bigcol">Vitamin C</p>
+            <p class="smallcol">0%</p>
+            <p class="smallcol">2%</p>
+        </div>
+        <div class="thinline"></div>
+        <div class="flex">
+            <p class="bigcol">Calcium</p>
+            <p class="smallcol">2%</p>
+            <p class="smallcol">15%</p>
+        </div>
+        <div class="thinline"></div>
+        <div class="flex">
+            <p class="bigcol">Iron</p>
+            <p class="smallcol">6%</p>
+            <p class="smallcol">6%</p>
+        </div>
+        <div class="thinline"></div>
+        <p class="small">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+            Perspiciatis veniam tempore vitae libero architecto dolorum quos, 
+            suscipit delectus, impedit corporis a esse expedita. 
+            Suscipit hic tempora, qui impedit vel nostrum quibusdam veritatis 
+            ad distinctio quis expedita nesciunt, culpa eum quas tempore 
+            amet quidem modi sunt odio provident! Voluptatum autem ratione, 
+            similique expedita repellat ipsa, cum, possimus ut nobis quos earum.
+        </p>
+        <div class="flex">
+            <p class="small bigcol2"></p>
+            <p class="small smallcol2">Calories:</p>
+            <p class="small smallcol2">2000</p>
+            <p class="small smallcol2">2.500</p>
+        </div>
+        <div class="thinline"></div>
+        <div class="flex">
+            <p class="small bigcol2">Total Fat</p>
+            <p class="small smallcol2">Less than</p>
+            <p class="small smallcol2">65g</p>
+            <p class="small smallcol2">80g</p>
+        </div>
+        <div class="flex">
+            <p class="small bigcol2 tabp">Saturated Fat</p>
+            <p class="small smallcol2">Less than</p>
+            <p class="small smallcol2">20g</p>
+            <p class="small smallcol2">25g</p>
+        </div>
+        <div class="flex">
+            <p class="small bigcol2">Cholesterol</p>
+            <p class="small smallcol2">Less than</p>
+            <p class="small smallcol2">300mg</p>
+            <p class="small smallcol2">300mg</p>
+        </div>
+        <div class="flex">
+            <p class="small bigcol2">Sodium</p>
+            <p class="small smallcol2">Less than</p>
+            <p class="small smallcol2">2.400mg</p>
+            <p class="small smallcol2">2.400mg</p>
+        </div>
+        <div class="flex">
+            <p class="small bigcol2">Total Carbohydrate</p>
+            <p class="small smallcol2"></p>
+            <p class="small smallcol2">300g</p>
+            <p class="small smallcol2">375g</p>
+        </div>
+        <div class="flex">
+            <p class="small bigcol2 tabp">Dietary Fiber</p>
+            <p class="small smallcol2"></p>
+            <p class="small smallcol2">25g</p>
+            <p class="small smallcol2">30g</p>
+        </div>
+        <div class="thinline"></div>
+        <p class="small">Calories per gram:</p>
+        <div class="flex lastrow">
+            <p class="small">Fat 9</p>
+            <p class="small">&bull;</p>
+            <p class="small">Carbohydrate 4</p>
+            <p class="small">&bull;</p>
+            <p class="small">Protein 4</p>
+        </div>
+    </div>
+</body>
+</html>
