@@ -8,7 +8,6 @@
 p {
     font-size: .8rem;
     font-weight: bold;
-    /* outline: 1px solid green; */
 }
 
 /* the wrapper holds everything, nothing is outside of that div */
@@ -60,7 +59,7 @@ p {
 }
 
 .smallcol2 {
-    width: 25%;
+    width: 20%;
 }
 
 .align-end {
